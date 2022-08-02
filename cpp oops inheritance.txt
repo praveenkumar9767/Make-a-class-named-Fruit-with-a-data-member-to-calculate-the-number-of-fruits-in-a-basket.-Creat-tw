@@ -1,0 +1,68 @@
+question = Make a class named Fruit with a data member to calculate the number of fruits in a basket. Create two other class named Apples and Mangoes to calculate the number of apples and mangoes in the basket. 
+Print the number of fruits of each type and the total number of fruits in the basket.
+
+solution 
+#include <iostream>
+using namespace std;
+
+class mango
+{
+  int mangoes;
+
+public:
+  void setData(int M)
+  {
+    mangoes = M;
+  }
+  void getData()
+  {
+    cout << "The total mangoes of " << mangoes << endl;
+  }
+};
+class apple
+{
+  int apples;
+
+public:
+  void setData(int A)
+  {
+    apples = A;
+  }
+
+  void getData()
+  {
+    cout << "The total apples in basked " << apples << endl;
+  }
+};
+
+class fruit
+{
+public:
+  void totalFruits(int apple, int mango)
+  {
+    cout << "the total fruits in a basket is " << apple + mango << endl;
+  }
+};
+
+int main(int argc, char const *argv[])
+{
+  int app, mang;
+  cout << "Please enter the number of apples :";
+  cin >> app;
+  cout << "Please enter the number of mangoes :";
+  cin >> mang;
+
+  apple a;
+  mango m;
+  fruit f;
+
+  a.setData(app);
+  a.getData();
+  m.setData(mang);
+  m.getData();
+  f.totalFruits(app, mang);
+  return 0;
+}
+
+
+https://github.com/praveenkumar9767
